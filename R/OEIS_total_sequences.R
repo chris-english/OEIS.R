@@ -21,7 +21,7 @@
 #' @examples
 #' OEIS_total_sequences()
 OEIS_total_sequences <- function() {
-  . <- NULL
+  . <- ''# from NULL STRING_ELT() can only be applied to a 'character vector', not a 'NULL' (read_xml.raw(
   OEIS_web_url() %>%
     xml2::read_html(.) %>%
     rvest::html_nodes(., xpath = "//html/body/center[5]/font") %>%
