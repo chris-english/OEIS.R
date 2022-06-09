@@ -58,7 +58,7 @@ OEIS_bfile.OEIS_ID <- function(ID) {
     char0toNULL
   data <- lines[!match_comments]
 
-  data <- readr::read_delim(text = data,
+  data <- utils::read.table(text = data,
                             colClasses = c("integer", "character"),
                             stringsAsFactors = FALSE)
   names(data) <- c("n", ID)
